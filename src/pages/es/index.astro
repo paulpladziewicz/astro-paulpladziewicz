@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ContactForm from "../../components/ContactForm.jsx";
+---
+
+<Layout title="Paul Pladziewicz - Software Engineer" lang="es">
+	<main>
+		<section class="container">
+			<h1>Welcome</h1>
+			<p class="lead">I am happy you are here.</p>
+		</section>
+		<ContactForm client:load lang="es" />
+	</main>
+</Layout>
