@@ -1,35 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 
 // Configuration
 @import "../../node_modules/bootstrap/scss/functions";
-$font-family-base: 'Inter', sans-serif;
+
+$font-family-base: 'Poppins', sans-serif;
 $font-size-base: 1.25rem;
-$primary: #1d4ed9;
+
+
+$primary: #0B3C5D; // Green
+$secondary: #328CC1; // Dark Green
+$info: #D9B310; // Teal Green
+$success: #27AE60; // Light Green
+$warning: #F1C40F; // Yellow
+$danger: #E74C3C; // Red
+
+$body-bg: #ffffff;
+$body-color: #1D2731;
 
 .btn-primary:hover {
   background-color: lighten($primary, 8%) !important;
   border-color: lighten($primary, 8%) !important;
 }
 
-$input-border-radius: 0;
+$link-color: $primary;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: underline;
+
+$input-border-radius: 4px;
 $input-border-width: 2px;
+
+$spacer: 1rem;
+$spacers: (
+        0: 0,
+        1: $spacer * .25,
+        2: $spacer * .5,
+        3: $spacer,
+        4: $spacer * 1.5,
+        5: $spacer * 2,
+);
+
+$grid-gutter-width: 1.5rem;
+$gutters: (
+        0: 0,
+        1: $spacer * .25,
+        2: $spacer * .5,
+        3: $spacer,
+        4: $spacer * 1.5,
+        5: $spacer * 3,
+);
+
+
+
 @import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+
+$badge-font-weight: $font-weight-medium;
+$badge-color: $white;
+
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/mixins";
-@import "../../node_modules/bootstrap/scss/utilities";
-
-// Layout & components
 @import "../../node_modules/bootstrap/scss/root";
+
+@import "../../node_modules/bootstrap/scss/utilities";
 @import "../../node_modules/bootstrap/scss/reboot";
 @import "../../node_modules/bootstrap/scss/type";
 @import "../../node_modules/bootstrap/scss/images";
 @import "../../node_modules/bootstrap/scss/containers";
 @import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/helpers";
 @import "../../node_modules/bootstrap/scss/forms";
 @import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/card";
+@import "../../node_modules/bootstrap/scss/badge";
 
-// Helpers
-@import "../../node_modules/bootstrap/scss/helpers";
-
-// Utilities
 @import "../../node_modules/bootstrap/scss/utilities/api";
+
+
+header {
+  margin-bottom: 80px;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+section {
+  margin-bottom: 160px;
+}

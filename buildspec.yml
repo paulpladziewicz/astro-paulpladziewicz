@@ -10,3 +10,6 @@ phases:
   post_build:
     commands:
       - aws s3 sync ./dist/ s3://paulpladziewicz/ --delete --exclude "images/*"
+      - aws cloudfront create-invalidation --distribution-id E31K5YCXZ1B865 --paths "/*"
+      - https://d1qy7lc15wxwmt.cloudfront.net
+

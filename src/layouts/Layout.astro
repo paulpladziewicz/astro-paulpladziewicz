@@ -4,9 +4,11 @@ import Footer from "../components/Footer.astro";
 export interface Props {
 	title: string;
 	lang: string;
+	langUrl: string;
 }
 
-const { title, lang } = Astro.props;
+let { title, lang, langUrl} = Astro.props;
+lang = lang || 'en';
 ---
 
 <!DOCTYPE html>
@@ -15,11 +17,13 @@ const { title, lang } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="https://d1qy7lc15wxwmt.cloudfront.net/images/pp.svg" />
-		<link rel="stylesheet" href="/global.css">
+		<link rel="stylesheet" href="/css/global.css">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body class="container-xxl">
+		<Navbar lang={lang} langUrl={langUrl} />
 		<slot />
+		<Footer />
 	</body>
 </html>
