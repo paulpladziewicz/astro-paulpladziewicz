@@ -6,12 +6,12 @@ export interface Props {
 
 let { lang, langUrl } = Astro.props;
 lang = lang || 'en';
-langUrl = langUrl || '/';
+langUrl = langUrl || '/es';
 ---
 
 <header>
     <nav class="d-flex justify-content-between align-items-center py-2">
         <a href="/"><img src="https://d1qy7lc15wxwmt.cloudfront.net/images/pp.svg" alt="logo" width="50px"/></a>
-        <a href={langUrl} class="text-primary">{lang === 'en' ? 'Español' : 'English'}</a>
+        <button type="button" class="btn btn-light" href={langUrl}>{lang === 'en' ? 'Español' : 'English'}</button>
     </nav>
 </header>
