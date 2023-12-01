@@ -1,0 +1,63 @@
+---
+import YouTube from "./icons/YouTube.astro";
+import Medium from "./icons/Medium.astro";
+
+const CONTENT = [
+    {
+        title: 'Tanstack Query',
+        platform: 'YouTube',
+        link: 'https://www.youtube.com/watch?v=-sFi2i9Fp4s'
+    },
+    {
+        title: 'AWS CDK',
+        platform: 'YouTube',
+        link: 'https://www.youtube.com/watch?v=IYg3y0H9Dl8'
+    },
+    {
+        title: 'GraphQL For Web Engineers',
+        platform: 'YouTube',
+        link: 'https://www.youtube.com/watch?v=wSHjeI7wTxs'
+    },
+    {
+        title: 'CSS Modules',
+        platform: 'YouTube',
+        link: 'https://www.youtube.com/watch?v=r-XfWp979AI'
+    },
+    {
+        title: 'Tailwind CSS',
+        platform: 'YouTube',
+        link: 'https://www.youtube.com/watch?v=q4Smxuzkq1g'
+    },
+    {
+        title: 'Next.js Web Workshop',
+        platform: 'YouTube',
+        link: 'https://www.youtube.com/watch?v=-sFi2i9Fp4s'
+    },
+    {
+        title: 'How Learning A Language Helps You Learn In General',
+        platform: 'Medium',
+        link: 'https://medium.com/@paulpladziewicz/how-learning-a-language-helps-you-learn-in-general-5fd55f6e92a8'
+    },
+    {
+        title: 'Easy and Automated Way to Deploy a Singe-Page Application on AWS',
+        platform: 'Medium',
+        link: 'https://medium.com/@paulpladziewicz/easy-and-automated-way-to-deploy-a-singe-page-application-on-aws-c9802738cf2b'
+    },
+    {
+        title: 'Effective Reading: Getting more out of what you read with the time you have.',
+        platform: 'Medium',
+        link: 'https://medium.com/@paulpladziewicz/effective-reading-getting-more-out-of-what-you-read-with-the-time-you-have-8aa410a21168'
+    }
+]
+---
+<section class="row">
+    <div class="text-center">
+        <h2 class="display-2 fw-bold mb-4">Presentations & Articles</h2>
+        <p class="lead">Technicals talks I have delivered along with written content I have produced to help others.</p>
+    </div>
+    <div class="d-flex flex-wrap justify-content-center gap-5">
+        {CONTENT.map(item => (
+            <a class="text-decoration-none" href={item.link} target="_blank">{item.platform === 'YouTube' ? <YouTube /> : <Medium />} {item.title}</a>
+        ))}
+    </div>
+</section>

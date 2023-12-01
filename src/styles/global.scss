@@ -1,16 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-
 // Configuration
 @import "../../node_modules/bootstrap/scss/functions";
 
 $font-family-base: 'Poppins', sans-serif;
 $font-size-base: 1.25rem;
 
-
 $primary: #0B3C5D; // Green
 $secondary: #328CC1; // Dark Green
-$info: #D9B310; // Teal Green
+$info: #FF9900; // Teal Green
 $success: #27AE60; // Light Green
 $warning: #F1C40F; // Yellow
 $danger: #E74C3C; // Red
@@ -75,19 +73,6 @@ $badge-color: $white;
 @import "../../node_modules/bootstrap/scss/badge";
 
 @import "../../node_modules/bootstrap/scss/utilities/api";
-
-
-header {
-  margin-bottom: 80px;
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  a {
-    text-decoration: none;
-  }
-}
 
 section {
   margin-bottom: 160px;

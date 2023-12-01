@@ -1,0 +1,46 @@
+---
+const PROJECTS = [
+    {
+        title: 'Serverless Triage API',
+        description: 'A hypothetical patient triage service build with the AWS Serverless Application Model with create, read, update, and delete functionality.',
+        hosted: false,
+        technologies: ['Node.js', 'AWS API Gateway', 'AWS DynamoDB', 'AWS Lambda'],
+        links: [{title: 'View Code', link: 'https://github.com/paulpladziewicz/serverless-triage-api'}]
+    },
+    {
+        title: 'TypeScript React Starter',
+        description: 'A starting point to create a single-page application using TypeScript with React.',
+        hosted: false,
+        technologies: ['TypeScript', 'React', 'Webpack', 'ESLint', 'Prettier'],
+        links: [{title: 'View Code', link: 'https://github.com/paulpladziewicz/ts-react-starter'}]
+    }
+]
+---
+<section id="projects">
+    <div class="text-center">
+        <h2 class="display-2 fw-bold mb-4">Selected Work</h2>
+        <p class="lead">Check out the projects I am able to share. There will be a project description page
+            along with the URL when it is hosted.</p>
+    </div>
+    <div class="row g-4">
+        {PROJECTS.map(item => {
+            return (
+                <div class="col-md-6 col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            {item.hosted ? <span class="badge bg-info mb-2">Hosted on AWS</span> : null}
+                            <h4>{item.title}</h4>
+                            <p>{item.description}</p>
+                            <div class="mb-3">
+                                {item.technologies.map(string => (<span class="badge bg-primary me-2">{string}</span>))}
+                            </div>
+                            <div>
+                                {item.links.map(obj => (<a class="btn btn-secondary text-light btn-sm mb-2" href={obj.link} role="button" target="_blank">{obj.title}</a>))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )
+        })}
+    </div>
+</section>

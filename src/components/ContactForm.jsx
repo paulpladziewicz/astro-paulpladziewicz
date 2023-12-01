@@ -1,24 +1,12 @@
 import React from 'react';
 import { Formik } from 'formik';
 
-const translation = {
-    en: {
-        title: 'Contact'
-    },
-    es: {
-        title: 'Contacto'
-    }
-}
-
-const ContactForm = ({lang}) => {
-    lang = lang || 'en';
-    const { title } = translation[lang];
-
+const ContactForm = () => {
     return (
         <section className="row">
             <div className="text-center mb-4">
                 <h2 className="display-3 fw-bold">Reach Out</h2>
-                <p>The information you provide will remain private.</p>
+                <p>I would love to hear from you. Please provide your contact information and how I can help.</p>
             </div>
 
             <Formik
@@ -71,7 +59,7 @@ const ContactForm = ({lang}) => {
                         </div>
                         <div className="mb-3">
                             <label htmlFor="message" className="form-label">Message</label>
-                            <textarea className="form-control" id="message" aria-describedby="message" onChange={handleChange} onBlur={handleBlur} value={values.message} />
+                            <textarea rows="5" className="form-control" id="message" aria-describedby="message" onChange={handleChange} onBlur={handleBlur} value={values.message} />
                             <div className="form-text text-danger">{errors.message && touched.message && errors.message}</div>
                         </div>
                         <button type="submit" className="btn btn-primary" disabled={isSubmitting}>Submit</button>

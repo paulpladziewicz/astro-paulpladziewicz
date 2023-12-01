@@ -1,85 +1,16 @@
 ---
 import Layout from './../layouts/Layout.astro';
+import Jumbotron from "../components/Jumbotron.astro";
+import SelectedWork from "../components/SelectedWork.astro";
+import Content from "../components/Content.astro";
 import ContactForm from "../components/ContactForm.jsx";
 ---
 
-<Layout title="Paul Pladziewicz - Software Engineer" lang="en" langUrl="/es">
+<Layout title="Paul Pladziewicz - Senior Software Engineer" lang="en" langUrl="/es">
     <main>
-        <section class="row justify-content-center align-items-center">
-                <div class="col-md-8 col-lg-9 order-1 text-center text-lg-start">
-                    <h1 class="display-1 fw-bold">Hello, my name is Paul Pladziewicz</h1>
-                    <p class="lead mb-4">I am a software engineer who is currently based in Fremont, Michigan.</p>
-                    <a role="button" href="/" class="btn btn-primary p-3">Download Resume</a>
-                    <a role="button" href="#projects" class="btn btn-secondary text-light p-3 m-3">Review Projects</a>
-                </div>
-                <img class="col-6 col-md-4 col-lg-3 order-0 order-md-2 rounded-circle" src="https://d1qy7lc15wxwmt.cloudfront.net/images/profilepicture.jpg" />
-        </section>
-        <section class="row">
-            <div class="col-md-4 text-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-terminal" viewBox="0 0 16 16">
-                    <path d="M6 9a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3A.5.5 0 0 1 6 9zM3.854 4.146a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2z"/>
-                    <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h12z"/>
-                </svg>
-                <h3 class="my-3">5 Years Experience</h3>
-                <p>With over five years of experience working with web technologies, I am a proficient software engineer specializing in web application development.</p>
-            </div>
-            <div class="col-md-4 text-center my-5 my-md-0">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
-                    <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
-                </svg>
-                <h3 class="my-3">Full Stack</h3>
-                <p>My comprehensive skills span the creation of intuitive user interfaces, the construction of robust REST APIs, and the deployment and management of applications in cloud environments.</p>
-            </div>
-            <div class="col-md-4 text-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-sign-turn-slight-right" viewBox="0 0 16 16">
-                    <path d="m8.335 6.982.8 1.386a.25.25 0 0 0 .451-.039l1.06-2.882a.25.25 0 0 0-.192-.333l-3.026-.523a.25.25 0 0 0-.26.371l.667 1.154-.621.373A2.5 2.5 0 0 0 6 8.632V11h1V8.632a1.5 1.5 0 0 1 .728-1.286l.607-.364Z"/>
-                    <path fill-rule="evenodd" d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435Zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134Z"/>
-                </svg>
-                <h3 class="my-3">Leadership</h3>
-                <p>Proven track record of guiding teams to produce high-quality code and adapt to new business requirements.</p>
-            </div>
-        </section>
-        <section id="projects">
-            <div class="text-center">
-                <h2 class="display-2 fw-bold mb-4">Selected Work</h2>
-                <p class="lead">Check out the projects I am able to share. There will be a project description page
-                    along with the URL when it is hosted.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <span class="badge bg-info mb-2">Hosted on AWS</span>
-                            <h4>Trinity Chatbot</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi cumque eveniet
-                                expedita fuga iusto magnam odit quaerat quia repellat!</p>
-                            <div class="mb-3">
-                                <span class="badge bg-secondary">HTML</span>
-                                <span class="badge bg-secondary">CSS</span>
-                                <span class="badge bg-secondary">JavaScript</span>
-                                <span class="badge bg-secondary">React</span>
-                            </div>
-                            <div>
-                                <a class="btn btn-outline-primary btn-sm mb-2" href="https://paulpladziewicz.com"
-                                   role="button" target="_blank">Visit UI</a>
-                                <a class="btn btn-outline-primary btn-sm mb-2" href="https://paulpladziewicz.com"
-                                   role="button" target="_blank">Documentation</a>
-                                <a class="btn btn-outline-primary btn-sm mb-2" href="https://paulpladziewicz.com"
-                                   role="button" target="_blank">Frontend Code</a>
-                                <a class="btn btn-outline-primary btn-sm mb-2" href="https://paulpladziewicz.com"
-                                   role="button" target="_blank">Backend Code</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="row">
-            <div class="text-center">
-                <h2 class="display-2 fw-bold mb-4">Presentations & Articles</h2>
-                <p class="lead">Technicals talks I have delivered along with written content I have produced to help others.</p>
-            </div>
-        </section>
+        <Jumbotron />
+        <SelectedWork />
+        <Content />
         <ContactForm client:load />
     </main>
 </Layout>
